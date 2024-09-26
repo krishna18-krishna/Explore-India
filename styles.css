@@ -1,0 +1,259 @@
+/* Basic Reset and Typography */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Styling */
+header {
+    /* Colors used -ff5733*/
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+   /*  z-index: 2; */
+    position: fixed;
+    z-index: 3;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #ff5733;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    
+}
+.logo p{
+    position: relative;
+    top: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    display: flex;
+    background-color: #ff5733;
+    justify-content: end;
+}
+
+nav ul li a {
+    /* Colors used - white*/
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    top: -30px;
+}
+
+/* Hero Section */
+.hero {
+       /* Colors used - white*/
+       position: relative;
+       top: 20px;
+}
+
+/**
+In CSS, ::before is a pseudo-element that is used to insert content before the content of an element.
+When you use hero::before, you're targeting a specific element with the class hero 
+and adding content before its actual content
+**/
+.hero::before {
+    content: "";
+    background: url('https://www.mcgroup.com/wp-content/uploads/2021/03/Banner.png') no-repeat center center/cover;
+    background-blend-mode: darken;
+    opacity: 0.3; /* Adjust the opacity here */
+    position: absolute;
+    top: -83px;
+    left: 0px;
+    width: 1480px;
+    height: 600px;
+    z-index: -2;
+}
+
+.hero h1, .hero p, .hero button {
+    position: relative;
+    top: 100px;
+    text-align: center;
+    z-index: 2; /* Ensures text appears above the background */
+}
+
+.hero h1 {
+    font-size: 50px;
+    position: relative;
+    top: 100px;
+}
+
+.hero p {
+    font-size: 20px;
+    position: relative;
+    top: 130px;
+}
+
+.hero button {
+    /* Colors used - ff5733*/
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    color:white;
+    background-color: #ff5733;
+    border: #ff5733;
+    height: 40px;
+    width: 130px;
+    border-radius: 2px;
+    position: relative;
+    top: 150px;
+}
+
+.hero button:hover {
+    /* Colors used - c70039*/
+    transform: scale(1.05);
+}
+
+/* Keyframes for Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tourist Places Section */
+.places {
+    /* Colors used - fff*/
+    padding:  20px;
+    padding-top: 20px;
+    margin-right: 10px;
+    position: relative;
+    top: 430px;
+}
+
+.places h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.places-grid{
+    display: flex;
+    justify-content: start;
+    align-content: start;
+    position: relative;
+    top: 80px;
+}
+
+.place-card {
+    /* Colors used - f3f3f3*/
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-right: 15px;
+
+}
+
+.place-card img {
+    border-radius: 5px;
+}
+
+.place-card h3 {
+    /* Colors used - ff5733*/
+    font-size: 24px;
+    padding: 10px;
+    color: white;
+    background-color: #ff5733;
+
+}
+
+.place-card p {
+    background-color: #f3f3f3;
+    padding: 10px;
+}
+
+.place-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Culture Section */
+.culture {
+    /* Colors used - fefefe*/
+    padding: 60px 40px;
+    text-align: center;
+    position: relative;
+    top: 500px;
+}
+
+.culture h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.culture p {
+    text-align: center;
+}
+
+.culture-gallery {
+    position: relative;
+    top: 60px;
+}
+
+.culture-gallery img {
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.culture-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    /* Colors used - ff5733, white*/
+    /* padding: 60px 40px; */
+    text-align: center;
+    position: relative;
+    top: 550px;
+    background-color: #ff5733;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    /* Colors used - white*/
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: white;
+    position: relative;
+    top: 0px;
+    justify-content: center;
+}
+.anger{
+    margin-left: 20px;
+}
+
+
+.footer-links a:hover {
+     color: #c70039;
+
+}
+
+footer p {
+    font-size: 14px;
+    position: relative;
+    top: 0px;
+
+}
